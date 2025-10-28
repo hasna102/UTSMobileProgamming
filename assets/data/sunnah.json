@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Shalat Sunnah Rawatib",
+    "category": "Ibadah",
+    "short": "Shalat sunnah sebelum/ sesudah shalat wajib.",
+    "detail": "Shalat sunnah Rawatib adalah shalat sunnah yang dikerjakan sebelum atau sesudah shalat fardhu. Banyak manfaatnya untuk mendekatkan diri kepada Allah dan menambah pahala.",
+    "times": "Minimal 2 raka'at",
+    "icon": "prayer"
+  },
+  {
+    "id": 2,
+    "title": "Membaca Doa Sebelum Tidur",
+    "category": "Adab",
+    "short": "Doa dan dzikir sebelum tidur.",
+    "detail": "Membiasakan membaca doa dan istighfar sebelum tidur untuk menjaga diri dan mendapat keberkahan dalam tidur.",
+    "times": "Setiap malam",
+    "icon": "sleep"
+  },
+  {
+    "id": 3,
+    "title": "Makan dengan Tangan Kanan",
+    "category": "Adab",
+    "short": "Etika makan mengikuti sunnah Rasul.",
+    "detail": "Makan dengan tangan kanan adalah sunnah Nabi yang mengajarkan adab dan kebersihan dalam makan.",
+    "times": "Setiap makan",
+    "icon": "food"
+  },
+  {
+    "id": 4,
+    "title": "Sedekah Ringan Setiap Hari",
+    "category": "Amalan Sosial",
+    "short": "Memberi sedikit sedekah rutin.",
+    "detail": "Sedekah tidak harus besar — konsistensi lebih penting. Sunnah memberi sedekah setiap hari meskipun kecil.",
+    "times": "Bisa harian",
+    "icon": "charity"
+  },
+  {
+    "id": 5,
+    "title": "Berwudhu Sebelum Tidur",
+    "category": "Ibadah",
+    "short": "Berwudhu ringan sebelum tidur.",
+    "detail": "Berwudhu sebelum tidur merupakan sunnah yang memelihara kesucian dan menjadi wasilah memperolehi pahala.",
+    "times": "Setiap malam",
+    "icon": "water"
+  },
+  {
+    "id": 6,
+    "title": "Senyum kepada Sesama",
+    "category": "Amalan Sosial",
+    "short": "Senyum sebagai sedekah.",
+    "detail": "Senyum sederhana dianggap sedekah menurut hadits dan mempermudah hubungan sosial.",
+    "times": "Setiap hari",
+    "icon": "smile"
+  },
+  {
+    "id": 7,
+    "title": "Membaca Al-Qur'an 1 Halaman",
+    "category": "Ibadah",
+    "short": "Membiasakan membaca Al-Qur'an meski sedikit.",
+    "detail": "Konsistensi membaca Al-Qur'an setiap hari, walau satu halaman, membawa keberkahan dan pahala.",
+    "times": "Harian",
+    "icon": "quran"
+  },
+  {
+    "id": 8,
+    "title": "Mengucap Salam Saat Bertemu",
+    "category": "Adab",
+    "short": "Mengucap salam kepada orang lain.",
+    "detail": "Mengucap salam menyebarkan kedamaian dan mengikuti sunnah Nabi.",
+    "times": "Setiap berjumpa",
+    "icon": "greet"
+  }
+]
