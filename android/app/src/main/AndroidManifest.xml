@@ -1,8 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="sunnah_tracker"
+        android:label="sunnah_tracker2"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data
+            android:name="io.flutter.embedding.android.EnableImpeller"
+            android:value="false" />
+        <meta-data
+            android:name="io.flutter.embedding.android.EnableVulkan"
+            android:value="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

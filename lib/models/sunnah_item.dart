@@ -19,6 +19,7 @@ class SunnahItem {
     this.isCompleted = false,
   });
 
+  /// Convert object → JSON
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -32,19 +33,29 @@ class SunnahItem {
     };
   }
 
+  /// Convert JSON → Object (FIXED)
   factory SunnahItem.fromJson(Map<String, dynamic> json) {
     return SunnahItem(
-      id: json['id'],
-      title: json['title'],
-      subtitle: json['subtitle'],
-      category: json['category'],
-      description: json['description'],
-      icon: json['icon'],
-      streakDays: json['streakDays'] ?? 0,
-      isCompleted: json['isCompleted'] ?? false,
+      id: json['id']?.toString() ?? '',
+      title: json['title']?.toString() ?? '',
+      subtitle: json['subtitle']?.toString() ?? '',
+      category: json['category']?.toString() ?? '',
+      description: json['description']?.toString() ?? '',
+      icon: json['icon']?.toString() ?? '',
+
+      /// FIX: hadist.json kadang kasih angka → harus dipaksa jadi int
+      streakDays: json['streakDays'] is int
+          ? json['streakDays']
+          : int.tryParse(json['streakDays']?.toString() ?? '0') ?? 0,
+
+      /// FIX: kadang boolean dikirim sebagai string “true”
+      isCompleted: json['isCompleted'] is bool
+          ? json['isCompleted']
+          : json['isCompleted']?.toString() == 'true',
     );
   }
 
+  /// Untuk update sebagian field
   SunnahItem copyWith({
     String? id,
     String? title,

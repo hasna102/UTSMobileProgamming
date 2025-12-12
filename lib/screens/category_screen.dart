@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../models/sunnah_item.dart';
-import '../widgets/sunnah_card.dart';
+import '../widgets/sunnah_card.dart'; // TAMBAHKAN INI
 
 class CategoryScreen extends StatefulWidget {
   final String category;
   final List<SunnahItem> initialItems;
   final Function(String) onToggle;
   final Function(SunnahItem) onShowDetail;
-  final Function(String) onRefresh; // Tambah callback untuk refresh data
+  final Function(String) onRefresh;
 
   const CategoryScreen({
     super.key,
@@ -34,7 +34,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
   Color _getCategoryColor() {
     switch (widget.category) {
       case 'Ibadah':
-        return Colors.purple;
+        return const Color.fromARGB(255, 211, 117, 227);
       case 'Amalan':
         return Colors.orange;
       case 'Kebersihan':
@@ -66,7 +66,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
   }
 
   void _refreshData() {
-    // Panggil callback untuk ambil data terbaru
     final updatedItems = widget.onRefresh(widget.category);
     setState(() {
       items = updatedItems;
@@ -87,7 +86,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  color.withValues(alpha: 0.6),
+                  color.withOpacity(0.6),
                   color,
                 ],
               ),
@@ -121,11 +120,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    // Icon Category
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.white.withValues(alpha: 0.2),
+                        color: Colors.white.withOpacity(0.2),
                         shape: BoxShape.circle,
                       ),
                       child: Icon(
@@ -179,9 +177,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       return SunnahCard(
                         item: item,
                         onToggle: () {
-                          // Panggil onToggle dari HomeScreen
                           widget.onToggle(item.id);
-                          // Refresh data untuk update UI
                           _refreshData();
                         },
                         onInfo: () => widget.onShowDetail(item),
